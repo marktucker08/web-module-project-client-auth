@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import { axiosAuth } from "../util/axiosAuth";
 
 function AddFriend() {
+
+    if (!localStorage.getItem('token')) {
+        return <Navigate to="/login" />
+      }
+    
     const navigate = useNavigate()
     const [form, setForm] = useState({
         friend: {

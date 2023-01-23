@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
-
+import { Navigate } from 'react-router-dom';
 import { axiosAuth } from "../util/axiosAuth";
 
 
 function FriendsList() {
+
+    if (!localStorage.getItem('token')) {
+        return <Navigate to="/login" />
+      }
 
     const [friends, setFriends] = useState([])
 

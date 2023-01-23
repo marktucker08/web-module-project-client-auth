@@ -13,7 +13,6 @@ function Login(props) {
       });
     
     const handleChange = e => {
-        console.log(params)
         setState({
           credentials: {
             ...state.credentials,
@@ -38,6 +37,7 @@ function Login(props) {
 
     return (
         <div>
+        <h1>Login</h1>
           <form onSubmit={login}>
             <label>Username: <input
               type="text"
