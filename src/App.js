@@ -15,20 +15,13 @@ function App() {
           <header>
           <h2>Friends Database</h2>
           <nav>
-            <ul>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/logout">Logout</Link>
-              </li>
-              <li>
-                <Link to="/friends">Friend List</Link>
-              </li>
-              <li>
-                <Link to="/friends/add">Add Friend</Link>
-              </li>
-              </ul>
+                <Link className="link" to="/login">Login</Link>
+              
+                <Link className="link" to="/logout">Logout</Link>
+        
+                <Link className="link" to="/friends">Friend List</Link>
+             
+                <Link className="link" to="/friends/add">Add Friend</Link>
           </nav>
         </header>
       </div>
