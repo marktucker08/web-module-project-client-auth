@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login(props) {
-    const params = useParams()
+    
     const navigate = useNavigate()
     const [state, setState] = useState({
         credentials: {
@@ -26,10 +26,10 @@ function Login(props) {
         e.preventDefault();
         axios.post('http://localhost:9000/api/login', state.credentials)
         .then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             const token = res.data.token
             localStorage.setItem('token', token)
-            navigate('/friendslist')
+            navigate('/friends')
         })
         .catch(err => {
             console.log(err)

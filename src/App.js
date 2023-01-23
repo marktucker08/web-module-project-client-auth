@@ -18,7 +18,7 @@ function App() {
               <Link to="/logout">Logout</Link>
             </li>
             <li>
-              <Link to="/friendslist">Friend List</Link>
+              <Link to="/friends">Friend List</Link>
             </li>
             <li>
               <Link to="/addfriend">Add Friend</Link>
@@ -27,7 +27,7 @@ function App() {
         </header>
       </div>
         <Routes>
-          <Route exact path="/friendslist" element={FriendsList()}/>
+          <Route exact path="/friends" element={FriendsList()}/>
           {/* <Route exact path="/addfriend" component={addFriend}/> 
           <Route path="/logout" component={Logout} /> */}
           <Route path="/login" element={Login()} />
