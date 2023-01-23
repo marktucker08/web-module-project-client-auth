@@ -9,12 +9,12 @@ function FriendsList() {
 
     useEffect(() => {
         getData();
-    }, [])
+    }, [friends])
 
 function getData() {
     axiosAuth().get('http://localhost:9000/api/friends')
     .then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         setFriends(res.data)
     })
     .catch(err => {
